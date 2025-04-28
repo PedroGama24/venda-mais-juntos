@@ -80,7 +80,7 @@ const Index = () => {
             <div className="relative overflow-hidden rounded-xl">
               <div className="absolute -inset-1 bg-gradient-to-r from-violet-400 to-blue-400 rounded-xl blur-lg opacity-70"></div>
               <img
-                src="../../public/lovable-uploads/sono_mulher_cama.webp"
+                src="lovable-uploads/sono_mulher_cama.webp"
                 alt="Pessoa dormindo tranquilamente"
                 className="relative rounded-xl shadow-xl max-w-full h-auto object-cover z-10 hover:scale-105 transition-transform duration-300 will-change-transform"
                 style={{ position: "static" }}
