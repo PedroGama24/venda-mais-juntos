@@ -8,7 +8,7 @@ import { ChevronRight, Check, Moon, Brain, Battery, ShieldCheck, Star, ShoppingC
 
 const Index = () => {
   const isMobile = useIsMobile();
-  
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-blue-50">
       {/* Navbar */}
@@ -21,9 +21,14 @@ const Index = () => {
             <a href="#beneficios" className="text-white hover:text-blue-100 text-sm md:text-base transition-colors">Benefícios</a>
             <a href="#sobre" className="text-white hover:text-blue-100 text-sm md:text-base transition-colors">Sobre o Ebook</a>
             <a href="#depoimentos" className="text-white hover:text-blue-100 text-sm md:text-base transition-colors">Depoimentos</a>
+            <a onClick={(e) => {
+                e.preventDefault();
+                document.querySelector("#sobre")?.scrollIntoView({ behavior: "smooth" });
+              }} >
             <Button className="bg-white text-violet-700 hover:bg-blue-100 font-medium rounded-full px-6 transition-all transform hover:scale-105">
               <ShoppingCart className="w-4 h-4 mr-2" /> Comprar Agora
             </Button>
+            </a>
           </div>
         </div>
       </nav>
@@ -45,16 +50,26 @@ const Index = () => {
               Como noites bem dormidas transformam sua vida
             </p>
             <p className="text-gray-600 text-lg">
-              Descubra os segredos para um sono reparador e como ele pode melhorar 
+              Descubra os segredos para um sono reparador e como ele pode melhorar
               significativamente sua saúde mental, produtividade e qualidade de vida.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
+            <a onClick={(e) => {
+                e.preventDefault();
+                document.querySelector("#sobre")?.scrollIntoView({ behavior: "smooth" });
+              }} >
               <Button size="lg" className="bg-violet-600 hover:bg-violet-700 text-white rounded-full px-8 py-6 transition-all transform hover:scale-105 shadow-lg">
-                <Download className="w-5 h-5 mr-2" /> Adquira agora
+                <ShoppingCart className="w-5 h-5 mr-2" /> Adquira agora
               </Button>
-              <Button variant="outline" size="lg" className="border-violet-400 text-violet-700 hover:bg-violet-50 rounded-full px-8 py-6 transition-colors">
-                Saiba mais <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
+            </a>
+              <a onClick={(e) => {
+                e.preventDefault();
+                document.querySelector("#sobre")?.scrollIntoView({ behavior: "smooth" });
+              }} >
+                <Button variant="outline" size="lg" className="border-violet-400 text-violet-700 hover:bg-violet-50 rounded-full px-8 py-6 transition-colors">
+                  Saiba mais <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-500 mt-2">
               <Shield className="h-4 w-4" />
@@ -64,10 +79,11 @@ const Index = () => {
           <div className="order-1 md:order-2 flex justify-center animate-scale-in">
             <div className="relative overflow-hidden rounded-xl">
               <div className="absolute -inset-1 bg-gradient-to-r from-violet-400 to-blue-400 rounded-xl blur-lg opacity-70"></div>
-              <img 
-                src="/lovable-uploads/1248e334-16f8-4719-be61-7dfce07feedf.png" 
-                alt="Pessoa dormindo tranquilamente" 
-                className="relative rounded-xl shadow-xl max-w-full h-auto object-cover z-10 hover:scale-105 transition-transform duration-300" 
+              <img
+                src="../../public/lovable-uploads/sono_mulher_cama.webp"
+                alt="Pessoa dormindo tranquilamente"
+                className="relative rounded-xl shadow-xl max-w-full h-auto object-cover z-10 hover:scale-105 transition-transform duration-300 will-change-transform"
+                style={{ position: "static" }}
               />
             </div>
           </div>
@@ -86,7 +102,7 @@ const Index = () => {
             </h2>
             <p className="text-gray-600">Descubra como dormir melhor pode transformar todos os aspectos da sua vida diária</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
             <Card className="p-6 border-t-4 border-violet-500 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
@@ -97,11 +113,11 @@ const Index = () => {
                 Melhora da Saúde Mental
               </h3>
               <p className="text-gray-600 text-center">
-                O sono de qualidade ajuda a regular o humor, reduzir a ansiedade e prevenir 
+                O sono de qualidade ajuda a regular o humor, reduzir a ansiedade e prevenir
                 a depressão, promovendo uma mente mais equilibrada e saudável.
               </p>
             </Card>
-            
+
             {/* Card 2 */}
             <Card className="p-6 border-t-4 border-blue-500 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -111,11 +127,11 @@ const Index = () => {
                 Aumento da Produtividade
               </h3>
               <p className="text-gray-600 text-center">
-                Dormir bem melhora a concentração, a memória e a capacidade de resolver 
+                Dormir bem melhora a concentração, a memória e a capacidade de resolver
                 problemas, aumentando sua eficiência no trabalho e nos estudos.
               </p>
             </Card>
-            
+
             {/* Card 3 */}
             <Card className="p-6 border-t-4 border-cyan-500 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <div className="bg-cyan-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -125,7 +141,7 @@ const Index = () => {
                 Fortalecimento do Sistema Imunológico
               </h3>
               <p className="text-gray-600 text-center">
-                Durante o sono, seu corpo produz proteínas que combatem infecções e 
+                Durante o sono, seu corpo produz proteínas que combatem infecções e
                 inflamações, fortalecendo sua defesa contra doenças.
               </p>
             </Card>
@@ -144,7 +160,7 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
                 Sobre o <span className="text-violet-700">Ebook</span>
               </h2>
-              
+
               <Tabs defaultValue="conteudo" className="w-full">
                 <TabsList className="mb-6 w-full justify-start">
                   <TabsTrigger value="conteudo">Conteúdo</TabsTrigger>
@@ -156,16 +172,16 @@ const Index = () => {
                     Este ebook abrangente oferece estratégias práticas e baseadas em ciência para melhorar a qualidade do seu sono e, consequentemente, sua saúde mental.
                   </p>
                   <ul className="space-y-3">
-                    {["Técnicas de relaxamento pré-sono", 
+                    {["Técnicas de relaxamento pré-sono",
                       "Como criar um ambiente ideal para dormir",
-                      "Rotinas noturnas recomendadas por especialistas", 
-                      "Alimentos que ajudam (e atrapalham) o sono", 
+                      "Rotinas noturnas recomendadas por especialistas",
+                      "Alimentos que ajudam (e atrapalham) o sono",
                       "Estratégias para lidar com insônia"].map((item, index) => (
-                      <li key={index} className="flex items-start bg-gray-50 p-3 rounded-lg hover:bg-gray-100 transition-colors">
-                        <Check className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">{item}</span>
-                      </li>
-                    ))}
+                        <li key={index} className="flex items-start bg-gray-50 p-3 rounded-lg hover:bg-gray-100 transition-colors">
+                          <Check className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-gray-600">{item}</span>
+                        </li>
+                      ))}
                   </ul>
                 </TabsContent>
                 <TabsContent value="autor" className="space-y-4">
@@ -189,7 +205,7 @@ const Index = () => {
                 </TabsContent>
               </Tabs>
             </div>
-            
+
             <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:shadow-xl transition-all duration-300">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-800">Ebook + Bônus</h3>
@@ -197,7 +213,7 @@ const Index = () => {
                   Oferta Especial
                 </div>
               </div>
-              
+
               <div className="space-y-4 mb-8">
                 <div className="flex items-start hover:bg-gray-50 p-2 rounded-lg transition-colors">
                   <Check className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
@@ -206,13 +222,13 @@ const Index = () => {
                     <p className="text-sm text-gray-500">200 páginas de conteúdo</p>
                   </div>
                 </div>
-                <div className="flex items-start hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                {/*    <div className="flex items-start hover:bg-gray-50 p-2 rounded-lg transition-colors">
                   <Check className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-medium">Áudios de Relaxamento</p>
                     <p className="text-sm text-gray-500">8 áudios guiados para melhor sono</p>
                   </div>
-                </div>
+                </div> */}
                 <div className="flex items-start hover:bg-gray-50 p-2 rounded-lg transition-colors">
                   <Check className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
                   <div>
@@ -228,28 +244,31 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              
+
               <Separator className="my-6" />
-              
+
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-gray-500 line-through">R$ 197,00</span>
+                  <span className="text-gray-500 line-through">R$ 75,80</span>
                   <span className="text-sm bg-red-100 text-red-600 px-2 py-1 rounded-full">
                     50% OFF
                   </span>
                 </div>
                 <div className="text-3xl font-bold text-gray-800">
-                  R$ 97,00
+                  R$ 37,90
                 </div>
                 <p className="text-sm text-gray-500 mt-1">
                   Pagamento único, sem assinaturas
                 </p>
               </div>
-              
-              <Button className="w-full bg-violet-600 hover:bg-violet-700 text-white rounded-full py-6 text-lg transition-all transform hover:scale-105 shadow-lg">
+              <Button className="w-full bg-violet-600 hover:bg-violet-700 text-white rounded-full py-6 text-lg transition-all transform hover:scale-105 shadow-lg"
+               onClick={() => {
+                window.location.href = "https://pay.kirvano.com/ff112555-731d-4d2d-8364-908866d347db";
+              }}
+              >    
                 <ShoppingCart className="w-5 h-5 mr-2" /> Garantir Meu Acesso Agora
               </Button>
-              
+
               <p className="text-center text-sm text-gray-500 mt-4 flex items-center justify-center">
                 <Shield className="w-4 h-4 mr-1" />
                 Garantia de satisfação de 30 dias ou seu dinheiro de volta
@@ -274,7 +293,7 @@ const Index = () => {
               e, consequentemente, suas vidas.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="p-6 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
@@ -313,7 +332,7 @@ const Index = () => {
               Tire suas dúvidas sobre o ebook e como ele pode ajudar você
             </p>
           </div>
-          
+
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <Card key={index} className="p-6 hover:shadow-md transition-all duration-300 hover:border-violet-200">
@@ -336,7 +355,7 @@ const Index = () => {
             sobre sono de qualidade.
           </p>
           <Button size="lg" className="bg-white text-violet-700 hover:bg-blue-100 font-semibold rounded-full px-10 py-6 text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
-            <ShoppingCart className="w-5 h-5 mr-2" /> Adquira Agora por R$ 97,00
+            <ShoppingCart className="w-5 h-5 mr-2" /> Adquira Agora por R$ 37,90
           </Button>
           <p className="mt-4 text-blue-100 flex items-center justify-center">
             <Shield className="w-4 h-4 mr-1" />
