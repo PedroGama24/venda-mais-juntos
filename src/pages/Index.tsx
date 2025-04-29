@@ -22,12 +22,12 @@ const Index = () => {
             <a href="#sobre" className="text-white hover:text-blue-100 text-sm md:text-base transition-colors">Sobre o Ebook</a>
             <a href="#depoimentos" className="text-white hover:text-blue-100 text-sm md:text-base transition-colors">Depoimentos</a>
             <a onClick={(e) => {
-                e.preventDefault();
-                document.querySelector("#sobre")?.scrollIntoView({ behavior: "smooth" });
-              }} >
-            <Button className="bg-white text-violet-700 hover:bg-blue-100 font-medium rounded-full px-6 transition-all transform hover:scale-105">
-              <ShoppingCart className="w-4 h-4 mr-2" /> Comprar Agora
-            </Button>
+              e.preventDefault();
+              document.querySelector("#sobre")?.scrollIntoView({ behavior: "smooth" });
+            }} >
+              <Button className="bg-white text-violet-700 hover:bg-blue-100 font-medium rounded-full px-6 transition-all transform hover:scale-105">
+                <ShoppingCart className="w-4 h-4 mr-2" /> Comprar Agora
+              </Button>
             </a>
           </div>
         </div>
@@ -54,14 +54,14 @@ const Index = () => {
               significativamente sua saúde mental, produtividade e qualidade de vida.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-            <a onClick={(e) => {
+              <a onClick={(e) => {
                 e.preventDefault();
                 document.querySelector("#sobre")?.scrollIntoView({ behavior: "smooth" });
               }} >
-              <Button size="lg" className="bg-violet-600 hover:bg-violet-700 text-white rounded-full px-8 py-6 transition-all transform hover:scale-105 shadow-lg">
-                <ShoppingCart className="w-5 h-5 mr-2" /> Adquira agora
-              </Button>
-            </a>
+                <Button size="lg" className="bg-violet-600 hover:bg-violet-700 text-white rounded-full px-8 py-6 transition-all transform hover:scale-105 shadow-lg">
+                  <ShoppingCart className="w-5 h-5 mr-2" /> Adquira agora
+                </Button>
+              </a>
               <a onClick={(e) => {
                 e.preventDefault();
                 document.querySelector("#sobre")?.scrollIntoView({ behavior: "smooth" });
@@ -262,10 +262,10 @@ const Index = () => {
                 </p>
               </div>
               <Button className="w-full bg-violet-600 hover:bg-violet-700 text-white rounded-full py-6 text-lg transition-all transform hover:scale-105 shadow-lg"
-               onClick={() => {
-                window.location.href = "https://pay.kirvano.com/ff112555-731d-4d2d-8364-908866d347db";
-              }}
-              >    
+                onClick={() => {
+                  window.location.href = "https://pay.kirvano.com/ff112555-731d-4d2d-8364-908866d347db";
+                }}
+              >
                 <ShoppingCart className="w-5 h-5 mr-2" /> Garantir Meu Acesso Agora
               </Button>
 
@@ -395,6 +395,13 @@ const Index = () => {
                   contato@sonodequalidade.com.br
                 </a>
               </p>
+              <div className="flex justify-center mt-5 mr-4">
+                <img
+                  src="lovable-uploads/seloqualidaded.png" // Substitua pelo caminho correto da imagem
+                  alt="Selo de Segurança SSL"
+                  className="w-24 h-auto" // Define largura fixa e mantém proporção
+                />
+              </div>
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
