@@ -354,7 +354,11 @@ const Index = () => {
             Invista na sua saúde mental e bem-estar hoje mesmo com nosso ebook completo
             sobre sono de qualidade.
           </p>
-          <Button size="lg" className="bg-white text-violet-700 hover:bg-blue-100 font-semibold rounded-full px-10 py-6 text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
+          <Button size="lg" className="bg-white text-violet-700 hover:bg-blue-100 font-semibold rounded-full px-10 py-6 text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
+            onClick={() => {
+              window.location.href = "https://pay.kirvano.com/ff112555-731d-4d2d-8364-908866d347db";
+            }}
+          >
             <ShoppingCart className="w-5 h-5 mr-2" /> Adquira Agora por R$ 11,90
           </Button>
           <p className="mt-4 text-blue-100 flex items-center justify-center">
